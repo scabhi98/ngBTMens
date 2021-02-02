@@ -1,0 +1,38 @@
+.cs-card{
+    min-width: 100px;
+    min-height: 80px;
+    border-radius: 8px;
+    background-color: transparent;
+    margin: 0.5%;
+    display: inline-block;
+}
+
+.cs-card p {
+    padding: 0 1em;
+}
+
+.cs-card > h2, .cs-card > h3, .cs-card > h4, .cs-card > h5, .cs-card > h6{
+    margin: 0.2rem 1.2rem 0.2rem 0.1rem;
+}
+
+.cs-image-container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+   
+}
+.cs-image-container img{
+    width: 100%;
+    height: auto;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+}
+.cs-image-container address{
+    /* position: absolute;
+    z-index: 10;
+    bottom: -50%;
+    right: 0; */
+    margin: -2em 0.4em 0px 0px;
+    text-align: right;
+}

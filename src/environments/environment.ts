@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  cssFiles: {
+    blueGreen: "assets/styles/blue.green.css",
+    brownDark: "assets/styles/brown.dark.css",
+    greenYellow: "assets/styles/green.yellow.css",
+    brownLight: "assets/styles/brown.light.css",
+    greenDark: "assets/styles/green.yellow.dark.css"
+  }
 };
 
 /*

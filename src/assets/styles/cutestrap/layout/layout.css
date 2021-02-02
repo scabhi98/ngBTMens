@@ -1,0 +1,69 @@
+.cs-container{
+    width: 80%;
+    margin: 1rem auto;
+    background-color: transparent;
+    padding: 5em;
+}
+
+/* Section Styles */
+.cs-header{
+    background-image: url('../../../btimg.jpeg');
+    background-size: cover;
+}
+.cs-header-overlay{
+    background-color: rgba(53, 11, 1, 0.267);
+    overflow: auto;
+}
+
+/* Margins */
+.cs-margin-10-all{
+    margin: 10%;
+}
+.cs-margin-10p-all{
+    margin: 10px;
+}
+.cs-margin-5-0{
+    margin: 5% 0%;
+}
+.cs-margin-5-all{
+    margin: 5%;
+}
+.cs-margin-0-5{
+    margin: 0% 5%;
+}
+.cs-margin-2-8{
+    margin: 2% 8%;
+}
+.cs-no-margin{
+    margin: 0 !important;
+}
+
+/* Padding */
+.cs-padding-0-2{
+    padding: 0% 2%;
+}
+
+/* Width and height*/
+.cs-full-width{
+    width: 100%;
+}
+.cs-full-height{
+    height: 100%;
+}
+
+/* Shape */
+.cs-full-circle{
+    border-radius: 100%;
+}
+.cs-small-square{
+    height: 3em;
+    width: 3em;
+}
+
+/* Positions */
+.cs-float-left{
+    float: left;
+}
+.cs-float-right{
+    float: right;
+}

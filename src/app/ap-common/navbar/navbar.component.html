@@ -1,0 +1,7 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span class="cs-title"> {{resourceService.getViewString().application}} </span>
+    <span class="cs-spacer"></span>
+    <a *ngFor="let link of links" [routerLink]="link.url">{{link.title}}</a>
+  </mat-toolbar-row>
+</mat-toolbar>

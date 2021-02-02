@@ -1,0 +1,92 @@
+.cs-form-wrapper{
+  width: 80%;
+  max-width: 680px;
+}
+.cs-form-input{
+  margin: 0.8em auto;
+  
+}
+.cs-form-input label{
+  font-size: 0.9em;
+  display: inline-block;
+}
+.cs-form-input input, .cs-form-input textarea{
+  display: block;
+  width: 90%;
+  margin: 0.4rem 0rem 0rem auto;
+  padding: 0.35rem;
+  background-color: rgba(135, 54, 0, 0.2);
+  border: 1px solid black;
+  transition: 300ms linear all;
+}
+.cs-form-input input[type=radio]{
+  display: inline;
+  margin-left: 0.5em; 
+}
+.cs-form-input input:focus, .cs-form-input textarea:focus{
+  box-shadow: 0px 0px 4px 1px rgba(135, 63, 0, 0.5), 0px 0px 10px 3px rgba(135, 72, 0, 0.4);
+  
+  transition: 150ms linear all;
+}
+.cs-form-input textarea{
+  min-height: 4em;
+}
+.cs-form-input input:hover, .cs-form-input textarea:hover, .cs-form-actions button:hover {
+  box-shadow: 0px 0px 4px 1px rgba(135, 63, 0, 0.5), 0px 0px 10px 3px rgba(135, 72, 0, 0.4);
+  transition: 300ms linear all;
+}
+
+.cs-form-action {
+  padding: 0.8em 1.2em;
+  min-width: 100px;
+  margin: 0px 5px;
+}
+.cs-form-actions{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.cs-form-action.cs-default, .cs-form-actions [type=submit] {
+  background-color:  rgba(135, 54, 0, 0.5)
+}  
+  .cs-form-action {
+    padding: 0.8em 1.2em;
+    min-width: 100px;
+    margin: 0px 5px;
+  }
+  .cs-form-actions{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .cs-form-action.cs-default, .cs-form-actions [type=submit] {
+    background-color:  rgba(135, 54, 0, 0.5)
+  }  
+
+  .cs-input-hint{
+   font-size:0.7rem;
+   line-height: 0.8rem;
+   color:rgb(255, 145, 0);
+   }
+
+ .cs-form-input input:invalid, .cs-form-input textarea:invalid {
+  box-shadow: 0px 0px 4px 1px red, 0px 0px 10px 3px rgba(243, 81, 135, 0.603);
+  transition: 300ms linear all;
+  }
+
+  .cs-form-input input:valid, .cs-form-input textarea:valid{
+    box-shadow: 0px 0px 4px 1px rgb(133, 221, 19), 0px 0px 10px 3px rgba(209, 219, 62, 0.897);
+    transition: 300ms linear all;
+   }
+
+              
+.cs-required:after {
+  content:" *";
+  color: red;
+  display: inline;
+  font-weight: bold;
+}
+  
+.cs-untouched > *:invalid, .cs-untouched *:valid{
+  box-shadow: none !important;
+  transition: 300ms linear all !important;
+} 
+              

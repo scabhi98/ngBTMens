@@ -1,0 +1,62 @@
+.cs-banner{
+}
+
+.cs-banner > * {
+    background: linear-gradient(to left,#ffb773da, #ffd2a8b0, #fad8b96e, #fff2eb00);
+}
+
+.cs-nav-wrapper{
+    background-color: #fffaf59e;
+}
+.cs-nav-wrapper:hover{
+    background-color: rgba(235, 235, 235, 0.87);
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.794);
+}
+nav .cs-title{
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.cs-elevation-z1{
+    box-shadow: 5px 5px 8px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 5px 5px 8px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 8px 1px rgba(0,0,0,0.75);
+}
+.cs-elevation-z2{
+    box-shadow: 8px 8px 10px 1px rgba(0,0,0,0.75);
+-webkit-box-shadow: 8px 8px 10px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 8px 8px 10px 1px rgba(0,0,0,0.75);
+}
+.cs-elevation-z3{
+    box-shadow: 12px 12px 16px 2px rgba(0,0,0,0.71);
+-webkit-box-shadow: 12px 12px 16px 2px rgba(0,0,0,0.71);
+-moz-box-shadow: 12px 12px 16px 2px rgba(0,0,0,0.71);
+}
+.cs-elevation-z4{
+    box-shadow: 14px 14px 20px 4px rgba(0,0,0,0.66);
+-webkit-box-shadow: 14px 14px 20px 4px rgba(0,0,0,0.66);
+-moz-box-shadow: 14px 14px 20px 4px rgba(0,0,0,0.66);
+}
+.cs-elevation-z5{
+    box-shadow: 14px 14px 25px 10px rgba(0,0,0,0.59);
+-webkit-box-shadow: 14px 14px 25px 10px rgba(0,0,0,0.59);
+-moz-box-shadow: 14px 14px 25px 10px rgba(0,0,0,0.59);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(253, 248, 243);
+}
+
+body *{
+    color: rgb(0, 0, 0);
+}
+
+button{
+    background-color: rgb(250, 249, 249);
+    border: 1px solid rgb(255, 236, 216);
+}

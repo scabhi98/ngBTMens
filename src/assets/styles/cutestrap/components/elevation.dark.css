@@ -1,0 +1,33 @@
+.cs-elevation-z1{
+    box-shadow: 2px 2px 14px 4px rgba(16, 16, 16,0.59);
+-webkit-box-shadow: 2px 2px 14px 4px rgba(16, 16, 16,0.59);
+-moz-box-shadow: 2px 2px 14px 4px rgba(16, 16, 16,0.59);
+    background-color: rgba(255, 255, 255, 0.02);
+}
+.cs-elevation-z2{
+    box-shadow: 2px 2px 14px 8px rgba(16, 16, 16,0.52);
+-webkit-box-shadow: 2px 2px 14px 8px rgba(16, 16, 16,0.52);
+-moz-box-shadow: 2px 2px 14px 8px rgba(16, 16, 16,0.52);
+    background-color: rgba(255, 255, 255, 0.041);
+}
+.cs-elevation-z3{
+    box-shadow: 2px 2px 24px 13px rgba(16,16,16,0.39);
+-webkit-box-shadow: 2px 2px 24px 13px rgba(16,16,16,0.39);
+-moz-box-shadow: 2px 2px 24px 13px rgba(16,16,16,0.39);
+background-color: rgba(255, 255, 255, 0.061);
+}
+.cs-elevation-z4{
+    box-shadow: 2px 2px 24px 18px rgba(16,16,16,0.34);
+-webkit-box-shadow: 2px 2px 24px 18px rgba(16,16,16,0.34);
+-moz-box-shadow: 2px 2px 24px 18px rgba(16,16,16,0.34);
+background-color: rgba(255, 255, 255, 0.075);
+}
+.cs-elevation-z5{
+    box-shadow: 2px 2px 46px 15px rgba(16,16,16,0.34);
+-webkit-box-shadow: 2px 2px 46px 15px rgba(16,16,16,0.34);
+-moz-box-shadow: 2px 2px 46px 15px rgba(16,16,16,0.34);
+background-color: rgba(255, 255, 255, 0.096);
+}
+[class*="elevation"]{
+    margin: 8px !important;
+}

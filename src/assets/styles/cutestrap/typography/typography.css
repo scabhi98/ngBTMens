@@ -1,0 +1,92 @@
+/* 
+
+font-family: 'Alegreya Sans SC', sans-serif;
+font-family: 'Amatic SC', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'Jost', sans-serif;
+font-family: 'Special Elite', cursive;
+
+*/
+
+p, a, blockquote, span, small, em, div, strong, .cs-font-jost {
+    font-family: 'Jost', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, nav a, .cs-font-alg {
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+.cs-font-danc, .cs-font-cursive{
+    font-family: 'Dancing Script', cursive;
+}
+.cs-font-amat, .cs-font-strange{
+    font-family: 'Amatic SC', cursive;
+}
+.cs-font-fredm, .cs-font-title{
+    font-family: 'Fredericka the Great', cursive;
+}
+.cs-font-qoute, .cs-font-special{
+    font-family: 'Special Elite', cursive;
+}
+
+.cs-jumbo-text{
+    font-size: 5rem;
+}
+.cs-text-xxxl{
+    font-size: 4rem;
+}
+.cs-text-xxl{
+    font-size: 3rem;
+}
+
+h1, .cs-text-xl{
+    font-size: 2.2rem;
+}
+h2{
+    font-size: 1.8rem;
+}
+h3, .cs-text-l{
+    font-size: 1.5rem
+}
+h4{
+    font-size: 1.3rem;
+}
+h5{
+    font-size: 1.2rem;
+}
+h6, .cs-text-m{
+    font-size: 1.1rem;
+}
+small, .cs-text-sm{
+    font-size: 0.85rem;
+}
+.cs-text-xs{
+    font-size: 0.75rem;
+}
+
+.cs-text-right{
+    text-align: right;
+}
+.cs-text-center{
+    text-align: center;
+}
+
+p, a, blockquote, span, small, em, div{
+    font-weight: 400;
+}
+.cs-font-light{
+    font-weight: 300;
+}
+.cs-font-bold {
+    font-weight: 600;
+}
+.cs-font-bolder {
+    font-weight: 800;
+}
+.cs-font-lighter{
+    font-weight: 200;
+}
+
+h3, h4 {
+    margin: 1rem 0.5rem;
+}
