@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from "../auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login-page',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private auth: AuthService, private router: Router) {
+    auth.getAuthStateChange().subscribe(token => {
+      if(token != null){
+        router.navigateByUrl('feed');
+      }
+    })
+  }
 
   ngOnInit(): void {
   }

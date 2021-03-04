@@ -1,5 +1,7 @@
-import {ChildNavigationLink} from "./child-navigation-link";
+import {Link} from "./link";
+import {ApIcon} from "./ap-icon";
 
-export interface NavigationLink extends ChildNavigationLink{
-  children?: ChildNavigationLink[];
+export interface NavigationLink extends Link{
+  icon?: ApIcon;
+  children?: Link[];
 }

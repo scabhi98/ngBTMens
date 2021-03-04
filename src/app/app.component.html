@@ -1,13 +1,26 @@
-<app-navbar [links]="resources.getNavigationLinks()"></app-navbar>
+<app-navbar [links]="navigation.getToolbarLinks()"
+            [menuLinks]="navigation.getMenuActionLinks()"
+            [signedIn]="auth.isSignedIn()"
+            (signin)="signInAction()"
+            (signout)="signOutAction()"
+></app-navbar>
 <mat-sidenav-container>
-  <mat-sidenav>
-
+  <mat-sidenav #sidenav [(opened)]="navigation.sidenav_opened" [mode]="navigation.sidenav_config.mode">
+    <mat-nav-list>
+      <mat-list-item *ngFor="let link of navigation.getSideNavLinks()">
+        <mat-icon *ngIf="link.icon"> {{link.icon}} </mat-icon>
+        <a [routerLink]="link.url" > {{ link.title }} </a>
+      </mat-list-item>
+    </mat-nav-list>
+    <mat-divider></mat-divider>
+    <mat-nav-list *ngIf="navigation.isMobileScreen()">
+      <mat-list-item *ngFor="let link of navigation.getToolbarLinks()">
+<!--        <mat-icon *ngIf="link.icon"> {{link.icon}} </mat-icon>-->
+        <a [routerLink]="link.url" > {{ link.title }} </a>
+      </mat-list-item>
+    </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
+  <mat-sidenav-content class="ap-router-content">
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
-<button (click)="changeLanguage(configValues.languages.be.key)">Change Links</button>
-<mat-select (selectionChange)="themeService.useTheme(currentTheme)" [(ngModel)]="currentTheme" >
-  <mat-option *ngFor="let theme of themeService.getThemes()" [value]="theme"> {{theme.name}} ({{theme.type}} Theme) </mat-option>
-</mat-select>

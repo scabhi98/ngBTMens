@@ -1,0 +1,8 @@
+.ap-news-feed-container{
+  max-width: 680px;
+  width: 80%;
+  margin: 5px auto;
+  border: grey 1px solid;
+  border-radius: 1em;
+  padding: 1em;
+}

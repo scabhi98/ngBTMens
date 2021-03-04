@@ -1,1 +1,12 @@
-<p>page-not-found works!</p>
+<div class="cs-container">
+  <h2 class="cs-font-alg">
+    Oops! <span class="cs-warn">Error 404</span>
+  </h2>
+
+  <div class="cs-image-container">
+    <img [src]="resource.resolveImage(resource.warehouse.images.pageNotFound.original)" alt="Page Not Found">
+    <p>
+      Sorry! the requested page is not found there. We can resume your experience from <span style="cursor: pointer" routerLink="/home">Home</span> again.
+    </p>
+  </div>
+</div>

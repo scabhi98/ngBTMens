@@ -20,5 +20,6 @@ export interface ViewString {
     login: string;
     profile_completion: string;
     sign_up: string;
-  }
+  };
+  msg: Object;
 }

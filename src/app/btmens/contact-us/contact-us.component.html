@@ -1,0 +1,69 @@
+<div class="cs-container">
+	<h1>Contact Us</h1>
+	<hr class="animate__animated animate__fadeInLeft">
+	<hr class="animate__animated animate__fadeInRight">
+	<br>
+	<div class="cs-form-wrapper">
+		<form action="localhost:3000/messages" method="post" class="cs-form">
+			<div class="cs-form-input">
+				<label for="name">Name</label>
+				<input type="text" id="name" placeholder="Enter your name" required="required"/>
+			</div>
+			<div class="cs-form-input">
+				<label for="email">Email</label>
+				<input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+							 placeholder="Enter your email address" required="required"/>
+			</div>
+			<div class="cs-form-input">
+				<label for="subject">Subject</label>
+				<input id="subject" type="text" placeholder="Subject of Message" required="required"/>
+			</div>
+			<div class=".cs-form-input input[type=radio]">
+				<span>Who are you? </span>
+				<input type="radio" id="student" name="designation" value="student">
+				<label for="student">Student</label>
+				<input type="radio" id="dsw" name="designation" value="dsw">
+				<label for="dsw">Dean of Student Welfare</label>
+				<input type="radio" id="provost" name="designation" value="provost">
+				<label for="provost">Provost</label>
+				<input type="radio" id="steward" name="designation" value="steward">
+				<label for="steward">Steward</label>
+				<input type="radio" id="other" name="designation" value="other">
+				<label for="other">Other</label>
+			</div>
+			<div class="cs-form-input">
+				<label for="message">Message</label>
+				<textarea id="message" required="required"></textarea>
+			</div>
+			<div class="cs-form-actions">
+				<button class="cs-form-action" type="submit">
+					Send
+				</button>
+				<button class="cs-form-action cs-reset">
+					Clear
+				</button>
+			</div>
+		</form>
+	</div>
+</div>
+<div class="cs-container cs-layout-row cs-center-stretch">
+	<p class="cs-flex-35 cs-layout-column cs-start-stretch cs-text-l animate__animated animate__fadeInLeft">
+				<span class="material-icons">
+						place
+				<strong>Address :</strong>
+				</span><br>
+		<i>
+			Radhakrishnan Bhawan (B.T.-MENS' HALL)<br>
+			Block-B, B-13, Central Park,<br>
+			Land Mark : Near B.T.College bus stop,<br>
+			Kalyani - 741235
+		</i>
+	</p>
+
+	<div class="cs-flex-65 cs-layout-column cs-start-end animate__animated animate__fadeInRight">
+		<iframe class="cs-flex-grow" style="max-height: 60%"
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29387.037750103857!2d88.41846690123052!3d22.97306026035911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f895591d63df43%3A0x3bc31900657e0a29!2sRadhakrishnan%20Bhawan%20(B.T%20-Men&#39;s%20Hall)!5e0!3m2!1sen!2sin!4v1600272540979!5m2!1sen!2sin"
+						width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+						tabindex="0"></iframe>
+	</div>
+</div>

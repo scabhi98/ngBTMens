@@ -1930,3 +1930,7 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
   color: #ededed;
   /*background: rgba(0, 0, 0, 0.87);*/
 }
+
+body{
+  background-color: rgba(0, 0, 0, 0.87);
+}

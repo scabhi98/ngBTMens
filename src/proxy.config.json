@@ -1,0 +1,12 @@
+{
+  "/api/auth/register": {
+    "target": "http://localhost:3000/auth/register",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/api/auth/login": {
+    "target": "http://localhost:3000/auth/login",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}

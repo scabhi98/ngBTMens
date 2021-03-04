@@ -1,0 +1,201 @@
+<section class="cs-content cs-container" id="content-section">
+  <h1>Profile</h1>
+  <hr class="animate__animated animate__fadeInLeft">
+  <hr class="animate__animated animate__fadeInRight">
+  <div class="cs-layout-column cs-gt-s-layout-row cs-gt-m-layout-row">
+    <div class="cs-flex-100 cs-gt-s-flex-50 cs-gt-m-flex-25 cs-layout-column cs-start-stretch">
+
+      <div class="cs-card cs-elevation-z2">
+        <h3 class="cs-text-center">
+          My Virtual I-Card
+        </h3>
+        <br>
+        <div class="cs-text-center">
+          <img class="profile" [src]="resource.resolveImage('avatar_person.jpg')"  alt="profile_pic"><br><br>
+        </div>
+        <div class="cs-text-center">
+          <span class="cs-text-l cs-font-bold ">Kunal Sen</span><br>
+          <span class="cs-text-m">MCA</span><br>
+          <span class="cs-text-m">Computer Science & Engineering</span><br>
+        </div>
+        <div class="cs-margin-5-0">
+          <div class="cs-layout-row cs-space-between-center ">
+            <span>Profile Completion:</span>
+            <span>32%</span>
+          </div>
+          <div class="cs-layout-row cs-start-center">
+            <progress class="cs-flex-grow" id="file" value="32" max="100"></progress>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="cs-card cs-elevation-z2">
+        <div class="cs-layout-row cs-start-center cs-padding-0-2 cs-heading-background">
+          <i class="material-icons">
+            build_circle
+          </i>
+          <h3>Profile</h3>
+        </div>
+        <div class="cs-layout-row cs-start-center cs-list-item-bordered cs-padding-0-2">
+          <i class="material-icons">settings</i>
+          <span routerLink="edit">Settings</span>
+        </div>
+        <div class="cs-layout-row cs-start-center cs-list-item-bordered cs-padding-0-2">
+          <i class="material-icons">message</i>
+          <span>Messages</span>
+        </div>
+        <div class="cs-layout-row cs-start-center cs-padding-0-2 cs-list-item-bordered">
+          <i class="material-icons">photo_library</i>
+          <span>Gallery</span>
+        </div>
+      </div>
+
+
+      <div class="cs-card cs-elevation-z2">
+        <div class="cs-layout-row cs-start-center cs-padding-0-2 cs-heading-background ">
+          <i class="material-icons">
+            contacts
+          </i>
+          <h3>&nbsp; My Roommates</h3>
+        </div>
+
+        <div class="cs-layout-row cs-start-center cs-list-item-bordered cs-padding-0-2">
+          <img [src]="resource.resolveImage('avatar_person.jpg')" alt="Avatar" class="avatar">
+          <span>Sanket Auddya</span>
+        </div>
+        <div class="cs-layout-row cs-start-center cs-list-item-bordered cs-padding-0-2">
+          <img [src]="resource.resolveImage('avatar_person.jpg')" alt="Avatar" class="avatar">
+          <span>Sudip Samanta</span>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="cs-flex-100 cs-gt-s-flex-50 cs-gt-m-flex-75 cs-layout-column cs-start-stretch">
+
+      <div class="cs-layout-row cs-start-center cs-padding-0-2 cs-heading-background">
+        <i class="material-icons">vpn_lock</i>
+        <h4> &nbsp; Authentication Details</h4>
+      </div>
+      <div class="cs-layout-row">
+        <div class="cs-layout-row cs-start-center cs-padding-0-2  cs-full-width cs-list-item-bordered ">
+          <i class="material-icons">login</i>&nbsp;&nbsp;
+          <span class="cs-text-bold"> Application-Id : </span>&nbsp;
+          <span>APP/KU/06/18/MCA123</span>
+        </div>
+        <div class="cs-layout-row cs-start-center cs-padding-0-2  cs-full-width cs-list-item-bordered ">
+          <i class="material-icons">lock</i> &nbsp;&nbsp;
+          <span class="cs-text-bold"> Password : </span>&nbsp;
+          <span>********</span>
+        </div>
+      </div>
+      <div class="cs-layout-row">
+        <div class="cs-layout-row cs-start-center cs-padding-0-2  cs-full-width cs-list-item-bordered">
+          <i class="material-icons">email</i> &nbsp;&nbsp;
+          <span class="cs-text-bold"> Email : </span>&nbsp;
+          <span>kunal.9856@yahoo.com</span>
+        </div>
+        <div class="cs-layout-row cs-start-center cs-padding-0-2  cs-full-width cs-list-item-bordered">
+          <i class="material-icons">phone</i> &nbsp;&nbsp;
+          <span class="cs-text-bold"> Contact No. : </span>&nbsp;
+          <span>******933</span>
+        </div>
+      </div>
+
+      <br>
+      <br>
+
+      <div class="cs-layout-row cs-start-center cs-padding-0-2 cs-heading-background">
+        <i class="material-icons">perm_identity</i>
+        <h4> &nbsp; Personal Information</h4>
+      </div>
+      <div class="cs-layout-row">
+        <div class="cs-layout-row cs-start-center cs-padding-0-2  cs-full-width cs-list-item-bordered ">
+          <span class="cs-text-bold">First Name : </span>&nbsp;
+          <span>Kunal </span>
+        </div>
+        <div class="cs-layout-row cs-start-center cs-padding-0-2  cs-full-width cs-list-item-bordered ">
+          <span class="cs-text-bold">Last Name : </span>&nbsp;
+          <span>Sen</span>
+        </div>
+      </div>
+      <div class="cs-layout-row">
+        <div class="cs-layout-row cs-start-center cs-padding-0-2  cs-full-width cs-list-item-bordered ">
+          <span class="cs-text-bold">Date Of Birth :</span>&nbsp;
+          <span>Day - Month - Year</span>
+        </div>
+        <div class="cs-layout-row cs-start-center cs-padding-0-2  cs-full-width cs-list-item-bordered ">
+          <span class="cs-text-bold"> Gender : </span>&nbsp;
+          <span>Male</span>
+        </div>
+      </div>
+      <div class="cs-layout-row">
+        <div class="cs-layout-row cs-start-center cs-padding-0-2  cs-full-width cs-list-item-bordered ">
+          <span class="cs-text-bold">Date Of Hostel Admission :</span>&nbsp;
+          <span>Day - Month - Year</span>
+        </div>
+        <div class="cs-layout-row cs-start-center cs-padding-0-2  cs-full-width cs-list-item-bordered ">
+          <span class="cs-text-bold"> Room No. : </span>&nbsp;
+          <span>18</span>
+        </div>
+      </div>
+      <div class="cs-layout-row">
+        <div class="cs-layout-row cs-start-center cs-padding-0-2  cs-full-width cs-list-item-bordered ">
+          <span class="cs-text-bold">City/village :</span>&nbsp;
+          <span>********</span>
+        </div>
+        <div class="cs-layout-row cs-start-center cs-padding-0-2  cs-full-width cs-list-item-bordered ">
+          <span class="cs-text-bold"> District : </span>&nbsp;
+          <span>********</span>
+        </div>
+      </div>
+      <div class="cs-layout-row">
+        <div class="cs-layout-row cs-start-center cs-padding-0-2  cs-full-width cs-list-item-bordered ">
+          <span class="cs-text-bold">State/Province :</span>&nbsp;
+          <span>********</span>
+        </div>
+        <div class="cs-layout-row cs-start-center cs-padding-0-2  cs-full-width cs-list-item-bordered ">
+          <span class="cs-text-bold">ZIP/PIN : </span>&nbsp;
+          <span>********</span>
+        </div>
+      </div>
+      <div class="cs-layout-row">
+        <div class="cs-layout-row cs-start-center cs-padding-0-2  cs-full-width cs-list-item-bordered ">
+          <span class="cs-text-bold">Country : </span>&nbsp;
+          <span>********</span>
+        </div>
+      </div>
+
+      <br>
+      <br>
+
+      <div class="cs-layout-row cs-start-center cs-padding-0-2 cs-heading-background">
+        <i class="material-icons">description</i>
+        <h4> &nbsp; About</h4>
+      </div>
+      <div class="cs-layout-row">
+        <div class="cs-layout-row cs-start-center cs-padding-0-2  cs-full-width cs-list-item-bordered ">
+          <span class="cs-text-bold">University : </span>&nbsp;
+          <span>University Of Kalyani </span>
+        </div>
+        <div class="cs-layout-row cs-start-center cs-padding-0-2  cs-full-width cs-list-item-bordered ">
+          <span class="cs-text-bold">Profession : </span>&nbsp;
+          <span>Student</span>
+        </div>
+      </div>
+      <div class="cs-layout-row">
+        <div class="cs-layout-row cs-start-center cs-padding-0-2  cs-full-width cs-list-item-bordered ">
+          <span class="cs-text-bold">Department : </span>&nbsp;
+          <span>Computer Science & Engineering</span>
+        </div>
+        <div class="cs-layout-row cs-start-center cs-padding-0-2  cs-full-width cs-list-item-bordered ">
+          <span class="cs-text-bold">Course : </span>&nbsp;
+          <span>MCA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

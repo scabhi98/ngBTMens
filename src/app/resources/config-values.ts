@@ -13,7 +13,7 @@ export class ConfigValues {
       value: 'Bengali'
     }
   };
-  public static themes: {
+  public static themes = {
     dark: {
       key: 0,
       value: 'Dark Theme'
@@ -21,6 +21,11 @@ export class ConfigValues {
     light: {
       key: 1,
       value: 'Light Theme'
+    }
+  };
+  public static formConfigs = {
+    loginForm: {
+      passwordLength: 8
     }
   }
 }

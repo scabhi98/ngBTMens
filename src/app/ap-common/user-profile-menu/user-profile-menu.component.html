@@ -1,0 +1,28 @@
+
+  <button color="primary" *ngIf="showSignIn; else showUserMenu" mat-raised-button (click)="onSignInClicked($event)"> Sign In </button>
+
+<ng-template #showUserMenu>
+  <button class="ap-user-menu-btn" cdkOverlayOrigin #trigger="cdkOverlayOrigin" (click)="toggleContent()">
+    <mat-icon>person</mat-icon>
+  </button>
+  <ng-template cdkConnectedOverlay
+               [cdkConnectedOverlayOrigin]="trigger"
+
+               [cdkConnectedOverlayOpen]="isOpen" >
+
+    <mat-nav-list [class]="panelClass">
+      <mat-list-item *ngIf="user_details">
+        <span class="ap-user-menu-btn"> <mat-icon>person</mat-icon> </span>
+        <span> {{user_details.name}} </span>
+        <small> {{user_details.email}} </small>
+      </mat-list-item>
+      <mat-list-item *ngFor="let menu of menuLinks" (click)="menu.action(); toggleContent();">
+        <mat-button> {{menu.title}} </mat-button>
+      </mat-list-item>
+      <mat-list-item (click)="signout.emit($event)">
+        Sign Out
+      </mat-list-item>
+    </mat-nav-list>
+
+  </ng-template>
+</ng-template>

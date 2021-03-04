@@ -64,6 +64,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "BTMens:build"
+
           },
           "configurations": {
             "production": {
@@ -122,5 +123,10 @@
       }
     }
   },
-  "defaultProject": "BTMens"
+  "defaultProject": "BTMens",
+  "cli": {
+    "warnings": {
+      "versionMismatch": false
+    }
+  }
 }

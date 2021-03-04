@@ -1,1 +1,51 @@
-<p>sign-form works!</p>
+<form  (ngSubmit)="initSignup()">
+  <div class="ap-signup-form" [fxLayout]="'column'" [fxFlexAlign]="'space-between stretch'">
+    <h2 fxFlex>Create your Account</h2>
+    <div fxFlex class="cs-layout-column cs-space-around-stretch">
+      <p class="cs-warn"> {{errMessage}} </p>
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input type="text" matInput [formControl]="username">
+        <mat-hint *ngIf="!username.dirty">Enter username for your account.</mat-hint>
+        <mat-error *ngIf="username.hasError('required')">
+          Username is required to sign up.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input type="text" matInput [formControl]="email">
+        <mat-hint *ngIf="!email.dirty">Enter email for your account.</mat-hint>
+        <mat-error *ngIf="!email.hasError('required') && email.hasError('email')">
+          Please Enter a valid email address.
+        </mat-error>
+        <mat-error *ngIf="email.hasError('required')">
+          Email is required to sign up.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input type="password" matInput [formControl]="password">
+        <mat-hint *ngIf="!password.dirty">Enter password</mat-hint>
+        <mat-error *ngIf="!password.hasError('required') && password.hasError('minlength')">
+          Password cannot be less than {{minPassLength}}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Confirm Password</mat-label>
+        <input type="password" matInput [formControl]="cnfpassword">
+        <mat-hint *ngIf="!cnfpassword.dirty">Confirm password</mat-hint>
+        <mat-error *ngIf="password.value != cnfpassword.value">
+          Passwords do not match.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="cs-layout-row">
+      <span class="cs-spacer"></span>
+      <button mat-button mat-dialog-close type="reset"> Cancel </button>
+      <button mat-raised-button [color]="'primary'" type="submit"> Sign Up </button>
+    </div>
+    <p>
+      Already have an account? <a routerLink="/login">Log In here.</a>
+    </p>
+  </div>
+</form>

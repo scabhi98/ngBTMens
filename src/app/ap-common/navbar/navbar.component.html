@@ -1,7 +1,36 @@
-<mat-toolbar color="primary">
+<mat-toolbar>
   <mat-toolbar-row>
+    <span *ngIf="!navigation.default_sidenav_open">
+      <button mat-button (click)="navigation.sidenavRef.toggle()">
+        <mat-icon> menu </mat-icon>
+      </button>
+    </span>
     <span class="cs-title"> {{resourceService.getViewString().application}} </span>
     <span class="cs-spacer"></span>
-    <a *ngFor="let link of links" [routerLink]="link.url">{{link.title}}</a>
+    <div class="cs-layout-row" *ngIf="!navigation.isMobileScreen()">
+      <a *ngFor="let link of links" [routerLink]="link.url" class="cs-perfect-center">
+      <span *ngIf="link.icon" class="cs-vert-center">
+        <img *ngIf="link.icon.imageUrl else icon" [src]="resourceService.resolveImage(link.icon.imageUrl)"  [alt]="link.icon.imageUrl"/>
+        <ng-template #icon>
+          <mat-icon > {{link.icon.icon}} </mat-icon>
+        </ng-template>
+      </span>
+
+        <span>
+        {{link.title}}
+      </span>
+      </a>
+
+    </div>
+
+    <app-user-profile-menu [buttonView]="'icon'"
+                           [menuLinks]="menuLinks"
+                           [user_details]="menuUser"
+                           [panelClass]="'ap-user-menu-panel'"
+                           [isOpen]="menuDefaultOpen"
+                           [showSignIn]="!hideSignIn"
+                           (signin)="onSignIn($event)"
+                           (signout)="onSignOut($event)"
+    ></app-user-profile-menu>
   </mat-toolbar-row>
 </mat-toolbar>

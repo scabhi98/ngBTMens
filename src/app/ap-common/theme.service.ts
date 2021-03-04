@@ -19,22 +19,22 @@ export class ThemeService {
     this.themes = [
       {
         name: "Blue Green",
-        cssPath: environment.cssFiles.blueGreen,
+        cssPath: environment.themes.blueGreen,
         type: "Light"
       },
       {
         name: "Brown Dark",
-        cssPath: environment.cssFiles.brownDark,
+        cssPath: environment.themes.brownDark,
         type: "Dark"
       },
       {
         name: "Brown Light",
-        cssPath: environment.cssFiles.brownLight,
+        cssPath: environment.themes.brownLight,
         type: "Light"
       },
       {
         name: "Green Yellow",
-        cssPath: environment.cssFiles.greenYellow,
+        cssPath: environment.themes.greenYellow,
         type: "Dark"
       }
     ];

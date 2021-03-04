@@ -94,9 +94,289 @@ h3, h4 {
   margin: 1rem 0.5rem;
 }
 
+.cs-warn{
+  color: red;
+}
+
 /* ------- --  -------- */
 
+/* Form Styling */
+
+.cs-form-wrapper{
+  width: 80%;
+  max-width: 680px;
+}
+.cs-form-input{
+  margin: 0.8em auto;
+
+}
+.cs-form-input label{
+  font-size: 0.9em;
+  display: inline-block;
+}
+.cs-form-input input, .cs-form-input textarea{
+  display: block;
+  width: 90%;
+  margin: 0.4rem 0rem 0rem auto;
+  padding: 0.35rem;
+  background-color: rgba(135, 54, 0, 0.2);
+  border: 1px solid black;
+  transition: 300ms linear all;
+}
+.cs-form-input input[type=radio]{
+  display: inline;
+  margin-left: 0.5em;
+}
+.cs-form-input input:focus, .cs-form-input textarea:focus{
+  box-shadow: 0px 0px 4px 1px rgba(135, 63, 0, 0.5), 0px 0px 10px 3px rgba(135, 72, 0, 0.4);
+
+  transition: 150ms linear all;
+}
+.cs-form-input textarea{
+  min-height: 4em;
+}
+.cs-form-input input:hover, .cs-form-input textarea:hover, .cs-form-actions button:hover {
+  box-shadow: 0px 0px 4px 1px rgba(135, 63, 0, 0.5), 0px 0px 10px 3px rgba(135, 72, 0, 0.4);
+  transition: 300ms linear all;
+}
+
+.cs-form-action {
+  padding: 0.8em 1.2em;
+  min-width: 100px;
+  margin: 0px 5px;
+}
+.cs-form-actions{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.cs-form-action.cs-default, .cs-form-actions [type=submit] {
+  background-color:  rgba(135, 54, 0, 0.5)
+}
+.cs-form-action {
+  padding: 0.8em 1.2em;
+  min-width: 100px;
+  margin: 0px 5px;
+}
+.cs-form-actions{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.cs-form-action.cs-default, .cs-form-actions [type=submit] {
+  background-color:  rgba(135, 54, 0, 0.5)
+}
+
+.cs-input-hint{
+  font-size:0.7rem;
+  line-height: 0.8rem;
+  color:rgb(255, 145, 0);
+}
+
+.cs-form-input input:invalid, .cs-form-input textarea:invalid {
+  box-shadow: 0px 0px 4px 1px red, 0px 0px 10px 3px rgba(243, 81, 135, 0.603);
+  transition: 300ms linear all;
+}
+
+.cs-form-input input:valid, .cs-form-input textarea:valid{
+  box-shadow: 0px 0px 4px 1px rgb(133, 221, 19), 0px 0px 10px 3px rgba(209, 219, 62, 0.897);
+  transition: 300ms linear all;
+}
+
+
+.cs-required:after {
+  content:" *";
+  color: red;
+  display: inline;
+  font-weight: bold;
+}
+
+.cs-untouched > *:invalid, .cs-untouched *:valid{
+  box-shadow: none !important;
+  transition: 300ms linear all !important;
+}
+
+/*  */
+
 /* Layout */
+
+.cs-container{
+  width: 80%;
+  margin: 1rem auto;
+  background-color: transparent;
+  padding-top: 2em;
+}
+
+.cs-layout, .cs-layout-row, .cs-layout-column{
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.cs-layout-row{
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+.cs-layout-column{
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+/* Layout Content Alignment */
+.cs-start-start, .cs-center-start, .cs-end-start, .cs-space-between-start, .cs-space-around-start{
+  align-items: flex-start;
+  -webkit-box-align: start;
+}
+.cs-start-center, .cs-center-center, .cs-end-center, .cs-space-between-center, .cs-space-around-center {
+  align-items: center;
+  -webkit-box-align: center;
+}
+.cs-start-end, .cs-center-end, .cs-end-end, .cs-space-between-end, .cs-space-around-end {
+  align-items: flex-end;
+  -webkit-box-align: end;
+}
+.cs-start-stretch, .cs-center-stretch, .cs-end-stretch, .cs-space-between-stretch, .cs-space-around-stretch {
+  align-items: stretch;
+  -webkit-box-align: stretch;
+}
+.cs-start-start, .cs-start-center, .cs-start-end, .cs-start-stretch{
+  -webkit-box-pack: justify;
+  justify-content: flex-start;
+}
+.cs-center-start, .cs-center-center, .cs-center-end, .cs-center-stretch{
+  -webkit-box-pack: justify;
+  justify-content: center;
+}
+.cs-end-center, .cs-end-stretch, .cs-end-start, .cs-end-end{
+  -webkit-box-pack: justify;
+  justify-content: flex-end;
+}
+.cs-space-between-start, .cs-space-between-center, .cs-space-between-stretch, .cs-space-between-end{
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+.cs-space-around-start, .cs-space-around-center, .cs-space-around-stretch, .cs-space-around-end{
+  -webkit-box-pack: justify;
+  justify-content: space-around;
+}
+.cs-justify-end{
+  justify-self: flex-end;
+}
+/* Flex Alignment */
+.cs-self-align-center{
+  align-self: center;
+}
+.cs-self-align-start{
+  align-self: flex-start;
+}
+.cs-self-align-end{
+  align-self: flex-end;
+}
+.cs-self-align-stretch{
+  align-self: stretch;
+}
+/* Show Hide */
+.cs-hide{
+  display: none;
+}
+.cs-show{
+  display: initial;
+}
+/* Flex Items*/
+.cs-spacer{
+  flex: 1 1 auto;
+}
+.cs-flex-grow, .cs-flex-100{
+  flex: 1 0 auto;
+}
+.cs-flex-shrink, .cs-flex-0{
+  flex: 0 1 auto;
+}
+.cs-no-shrink{
+  flex-shrink: 0;
+}
+.cs-no-grow{
+  flex-grow: 0;
+}
+
+.cs-perfect-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cs-vert-center{
+  display: flex;
+  align-items: center;
+}
+.cs-hor-center{
+  display: flex;
+  justify-content: center;
+}
+
+.cs-flex-wrap{
+  flex-wrap: wrap;
+}
+
+/* Section Styles */
+.cs-header{
+  background-size: cover;
+}
+.cs-header-overlay{
+  background-color: rgba(53, 11, 1, 0.267);
+  overflow: auto;
+}
+
+/* Margins */
+.cs-margin-10-all{
+  margin: 10%;
+}
+.cs-margin-10p-all{
+  margin: 10px;
+}
+.cs-margin-5-0{
+  margin: 5% 0%;
+}
+.cs-margin-5-all{
+  margin: 5%;
+}
+.cs-margin-0-5{
+  margin: 0% 5%;
+}
+.cs-margin-2-8{
+  margin: 2% 8%;
+}
+.cs-no-margin{
+  margin: 0 !important;
+}
+
+/* Padding */
+.cs-padding-0-2{
+  padding: 0% 2%;
+}
+
+/* Width and height*/
+.cs-full-width{
+  width: 100%;
+}
+.cs-full-height{
+  height: 100%;
+}
+
+/* Shape */
+.cs-full-circle{
+  border-radius: 100%;
+}
+.cs-small-square{
+  height: 3em;
+  width: 3em;
+}
+
+/* Positions */
+.cs-float-left{
+  float: left;
+}
+.cs-float-right{
+  float: right;
+}
 
 .cs-spacer {
   flex: 1 1 auto;
@@ -114,9 +394,9 @@ body *{
     /*color: white;*/
 }
 
-address{
-    margin: 1rem 1.2rem;
-}
+/*address, p{*/
+/*    margin: 1rem 1.2rem;*/
+/*}*/
 
 button{
     /*background-color: rgb(24, 11, 0);*/

@@ -1,1 +1,31 @@
-<p>login-form works!</p>
+<form  (ngSubmit)="initLogin()">
+<div class="ap-login-form" [fxLayout]="'column'" [fxFlexAlign]="'space-between stretch'">
+  <h2 fxFlex>Login your Account</h2>
+  <div fxFlex class="cs-layout-column cs-space-around-stretch">
+    <mat-form-field>
+      <mat-label>Username</mat-label>
+      <input type="text" matInput [formControl]="username">
+      <mat-hint *ngIf="!username.dirty">Enter Username associated wih your account.</mat-hint>
+      <mat-error *ngIf="username.hasError('required')">
+        Email is required to login.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input type="password" matInput [formControl]="password">
+      <mat-hint *ngIf="!password.dirty">Enter password</mat-hint>
+      <mat-error *ngIf="!password.hasError('required') && password.hasError('minlength')">
+        Password cannot be less than {{minPassLength}}
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="cs-layout-row">
+    <span class="cs-spacer"></span>
+    <button mat-button mat-dialog-close type="reset"> Cancel </button>
+    <button mat-raised-button [color]="'primary'" type="submit"> Login </button>
+  </div>
+  <p>
+    Are you a member of Radhakrishnan Bhawan but do not have an account. Don't worry <a mat-dialog-close routerLink="/signup">sign up here.</a>
+  </p>
+</div>
+</form>

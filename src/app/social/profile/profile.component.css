@@ -1,0 +1,42 @@
+img.profile {
+  border: 5px solid  #ddd;
+  border-radius: 50%;
+  padding: 5px;
+  width: 200px;
+  height:200px;
+  object-fit: fill;
+  object-position: 50% 50%;
+
+}
+
+img.profile:hover {
+  box-shadow: 0 0 10px 4.6px rgba(236, 85, 250, 0.7);
+}
+
+.cs-heading-background{
+  background-color: rgba(145, 145, 145, 0.363);
+}
+
+.cs-list-item-bordered{
+  border-bottom: 1px solid grey;
+  padding: 1em 0.5em;
+}
+
+h3, h4{
+  margin: 0.8em 0em;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.clear-contact{
+  color: red;
+}
+
+.div-height-50px{
+  height:50px;
+}

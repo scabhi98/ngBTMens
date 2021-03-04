@@ -2,18 +2,47 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+const pathToAssets = "assets";
+
+const paths = {
+  assets: pathToAssets,
+  stylesheets: pathToAssets + "/styles",
+  images: pathToAssets + "/images"
+}
+
 export const environment = {
   production: false,
 
-  cssFiles: {
-    blueGreen: "assets/styles/blue.green.css",
-    brownDark: "assets/styles/brown.dark.css",
-    greenYellow: "assets/styles/green.yellow.css",
-    brownLight: "assets/styles/brown.light.css",
-    greenDark: "assets/styles/green.yellow.dark.css"
-  }
+  themes: {
+    blueGreen: paths.stylesheets + "/blue.green.css",
+    brownDark: paths.stylesheets + "/brown.dark.css",
+    greenYellow: paths.stylesheets + "/green.yellow.css",
+    brownLight: paths.stylesheets + "/brown.light.css",
+    greenDark: paths.stylesheets + "/green.yellow.dark.css"
+  },
+  paths: paths
 };
 
+const api_root = "http://localhost:3000/";
+
+const api_prefix_lev_1 = {
+  auth: api_root + "auth/",
+  profile: api_root + "profile/"
+}
+
+export const api = {
+  login: api_prefix_lev_1.auth + "login",
+  register: api_prefix_lev_1.auth + "register",
+  profile_post_data: api_prefix_lev_1.profile + "update"
+};
+
+export const ResponseCodes = {
+  DUPL_INSERT: 400,
+  INVALID_REQ: 401,
+  REQ_FAILURE: 402,
+  NOT_ALLOWED: 403,
+  REQ_SUCCESS: 200,
+};
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
