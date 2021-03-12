@@ -25,15 +25,20 @@ export const environment = {
 
 const api_root = "http://localhost:3000/";
 
-const api_prefix_lev_1 = {
+const prefix = {
   auth: api_root + "auth/",
-  profile: api_root + "profile/"
+  profile: api_root + "profile/",
+  meal: api_root + "meal/"
 }
 
 export const api = {
-  login: api_prefix_lev_1.auth + "login",
-  register: api_prefix_lev_1.auth + "register",
-  profile_post_data: api_prefix_lev_1.profile + "update"
+  login: prefix.auth + "login",
+  register: prefix.auth + "register",
+  profile_post_data: prefix.profile + "update",
+  meal: {
+    MealOfTheDay: prefix.meal + "meal-today",
+    MealStatement: prefix.meal + 'meal-statement'
+  }
 };
 
 export const ResponseCodes = {

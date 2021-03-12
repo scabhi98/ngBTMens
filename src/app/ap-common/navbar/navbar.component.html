@@ -23,7 +23,7 @@
 
     </div>
 
-    <app-user-profile-menu [buttonView]="'icon'"
+    <app-user-profile-menu *ngIf="navigation.reqProfileButton" [buttonView]="'icon'"
                            [menuLinks]="menuLinks"
                            [user_details]="menuUser"
                            [panelClass]="'ap-user-menu-panel'"

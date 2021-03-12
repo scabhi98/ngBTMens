@@ -35,13 +35,14 @@ export class CommunicatorService {
     return res.asObservable();
   }
 
-  public postProfileData(personalInfo: PersonDetails, boarderDetails: BoarderDetails): Observable<GenericResponse>{
-    let res = new Subject<GenericResponse>();
+  public postProfileData(personalInfo: PersonDetails, boarderDetails: BoarderDetails): Observable<GenericResponse<any>>{
+    let res = new Subject<GenericResponse<any>>();
 
-    this.http.post<GenericResponse>(api.profile_post_data, {
+    this.http.post<GenericResponse<any>>(api.profile_post_data, {
       personalInfo: personalInfo,
       boarderInfo: boarderDetails,
-      token: this.auth.getToken()
+      token: this.auth.getToken(),
+      userID: this.auth.getUserID()
     }).subscribe(response => {
       if(response.status == ResponseCodes.REQ_SUCCESS){
         this.snackBar.open("Profile Data Updated Successfully.")._dismissAfter(3000);

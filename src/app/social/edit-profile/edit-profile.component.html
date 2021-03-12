@@ -31,7 +31,7 @@
               </mat-form-field>
             </div>
             <div>
-              <button mat-button matStepperNext>Next</button>
+              <button mat-raised-button matStepperNext>Next</button>
             </div>
           </form>
         </mat-step>
@@ -73,29 +73,65 @@
             </div>
             <div>
               <button mat-button matStepperPrevious>Back</button>
-              <button mat-button matStepperNext>Next</button>
+              <button mat-raised-button matStepperNext>Next</button>
             </div>
           </form>
         </mat-step>
         <mat-step [stepControl]="boarderInfoGroup">
           <form [formGroup]="boarderInfoGroup" (ngSubmit)="saveBoarderDetails()">
             <ng-template matStepLabel>Boarder Details</ng-template>
-            <mat-form-field>
-              <mat-label>Address</mat-label>
-              <input matInput formControlName="app_id" placeholder="Applcation Id">
-            </mat-form-field>
+            <div fxLayout="column" fxLayout.gt-sm="row" fxFlexAlign="space-between stretch" fxFlexAlign.gt-sm="start stretch" class="cs-card">
+              <mat-form-field fxFlex="45">
+                <mat-label>Application ID</mat-label>
+                <input matInput name="app_id" placeholder="Application ID" formControlName="app_id">
+              </mat-form-field>
+              <span fxFlex="10"></span>
+              <mat-form-field fxFlex="45">
+                <mat-label>Date of Admission</mat-label>
+                <input matInput name="doa" formControlName="doa" [matDatepicker]="doaPicker">
+                <mat-datepicker-toggle matSuffix [for]="doaPicker"></mat-datepicker-toggle>
+                <mat-datepicker #doaPicker></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div fxLayout="column" fxLayout.gt-sm="row" fxFlexAlign="space-between stretch" fxFlexAlign.gt-sm="start stretch" class="cs-card">
+              <mat-form-field fxFlex="45">
+                <mat-label>Course</mat-label>
+                <input matInput name="state" placeholder="Course Enrolled" formControlName="course">
+              </mat-form-field>
+              <span fxFlex="10"></span>
+              <mat-form-field fxFlex="45">
+                <mat-label>Department</mat-label>
+                <input matInput name="department" placeholder="Department" formControlName="department">
+              </mat-form-field>
+            </div>
+            <div fxLayout="column" fxLayout.gt-sm="row" fxFlexAlign="space-between stretch" fxFlexAlign.gt-sm="start stretch" class="cs-card">
+              <mat-form-field fxFlex="45">
+                <mat-label>Session Start</mat-label>
+                <input matInput name="session_start" formControlName="session_start" [matDatepicker]="sstartPicker">
+                <mat-datepicker-toggle matSuffix [for]="sstartPicker"></mat-datepicker-toggle>
+                <mat-datepicker #sstartPicker></mat-datepicker>
+              </mat-form-field>
+              <span fxFlex="10"></span>
+              <mat-form-field fxFlex="45">
+                <mat-label>Session End</mat-label>
+                <input matInput name="session_end" formControlName="session_end" [matDatepicker]="s_endPicker">
+                <mat-datepicker-toggle matSuffix [for]="s_endPicker"></mat-datepicker-toggle>
+                <mat-datepicker #s_endPicker></mat-datepicker>
+              </mat-form-field>
+            </div>
             <div>
               <button mat-button matStepperPrevious>Back</button>
-              <button mat-button matStepperNext>Next</button>
+              <button mat-raised-button matStepperNext>Next</button>
             </div>
           </form>
         </mat-step>
         <mat-step>
-          <ng-template matStepLabel>Done</ng-template>
-          <p>You are now done.</p>
+          <ng-template matStepLabel>Confirm</ng-template>
+
           <div>
             <button mat-button matStepperPrevious>Back</button>
             <button mat-button (click)="stepper.reset()">Reset</button>
+            <button mat-raised-button color="primary" (click)="finalSubmit()">Final Submit</button>
           </div>
         </mat-step>
       </mat-horizontal-stepper>

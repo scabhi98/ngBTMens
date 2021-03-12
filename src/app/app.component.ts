@@ -70,9 +70,17 @@ export class AppComponent implements AfterViewInit, OnInit
         action: () => this.router.navigateByUrl('profile')
       },
     ];
+    let sideNavLinks: NavigationLink[] = [
+      {
+        title: "Settings",
+        url: "/settings"
+      }
+    ]
     this.navigation.setMenuActionLinks(actionLinks);
 
     this.navigation.setToolbarLinks(navigationLinks);
+    this.navigation.setSidenavLinks(sideNavLinks);
+    this.navigation.reqProfileButton = true;
   }
 
   signInAction() {
@@ -127,7 +135,6 @@ export class AppComponent implements AfterViewInit, OnInit
         this.snackBar.open("You have successfully logged out",'Dismiss', {duration: 3000});
       }
     });
-
   }
 
   private mobileScreenSetup(){

@@ -1,1 +1,13 @@
-<p>settings works!</p>
+<section class="cs-container">
+  <div fxLayout="column">
+    <div fxLayout="row" fxFlexAlign="space-between center">
+      <span fxFlex="30">Theme</span>
+      <mat-form-field>
+        <mat-select (selectionChange)="theme.useTheme(selectedTheme)" [(value)]="selectedTheme" placeholder="Select Theme">
+          <mat-option [value]="null" disabled>Select Theme</mat-option>
+          <mat-option *ngFor="let th of theme.getThemes()" [value]="th" > {{th.name}} </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+</section>

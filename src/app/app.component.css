@@ -1,3 +1,6 @@
 .ap-router-content{
   min-height: 80vh;
 }
+.mat-sidenav{
+  min-width: 200px;
+}

@@ -38,7 +38,7 @@ export class EditProfileComponent implements OnInit {
       app_id: new FormControl('',[Validators.required]),
       doa: new FormControl('',[Validators.required]),
       course: new FormControl('',[Validators.required]),
-      dept: new FormControl('',[Validators.required]),
+      department: new FormControl('',[Validators.required]),
       session_start: new FormControl('', [Validators.required]),
       session_end: new FormControl('')
     })
@@ -56,5 +56,13 @@ export class EditProfileComponent implements OnInit {
   }
   public saveBoarderDetails(){
     console.log(this.boarderInfoGroup.value);
+  }
+
+  public finalSubmit() {
+    let pData = this.personalInfoGroup.value;
+    pData.addreess = this.addressDetailsGroup.value;
+    this.comm.postProfileData(pData,this.boarderInfoGroup.value).subscribe(res => {
+      console.log(res);
+    })
   }
 }

@@ -11,6 +11,8 @@ import { MealListComponent } from './meal/meal-list/meal-list.component';
 import { TransactionComponent } from './accounts/transaction/transaction.component';
 import { RecordComponent } from './accounts/record/record.component';
 import { SettingsComponent } from './settings/settings.component';
+import {FlexModule} from "@angular/flex-layout";
+import {MatSelectModule} from "@angular/material/select";
 
 
 
@@ -18,7 +20,9 @@ import { SettingsComponent } from './settings/settings.component';
   declarations: [ContactUsComponent, AboutUsComponent, HomeComponent, DashboardComponent, MealDetailsComponent, MealListItemComponent, MealListComponent, TransactionComponent, RecordComponent, SettingsComponent],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    FlexModule,
+    MatSelectModule
   ],
   providers: [HttpClient]
 })

@@ -16,14 +16,12 @@ export class NavigationService {
   sidenav_config: any = {
     mode: "side"
   }
-  sidenav_links: NavigationLink[] = [{
-    title: "This is test link",
-    url: "/dummy"
-  }];
+  sidenav_links: NavigationLink[] = [];
   sidenavRef: MatSidenav;
   toolbar_links: NavigationLink[] = [];
   toolbar_links_desp: NavigationLink[] = [];
   public mobScrObserver: Observable<BreakpointState>;
+  public reqProfileButton: boolean = true;
 
   menuLinks: ActionLink[];
 
